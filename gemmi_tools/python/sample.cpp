@@ -130,10 +130,10 @@ std::map<T, Z> Grid<T> get_sample_values(Grid<T> base_grid, Grid<T> sample_grid)
 
 template<typename T>
 std::map<std::vector<int>, gemmi::Position> 
-get_sample_positions(py::array_t<T> sample_points, py::array_t<T> sample_positions)
+get_sample_positions(py::array_t<int> sample_points, py::array_t<T> sample_positions)
 {
-	auto pt = sample_points.mutable_unchecked<2>();
-	auto ps = sample_positions.mutable_unchecked<2>();
+	auto pt = sample_points.mutable_unchecked();
+	auto ps = sample_positions.mutable_unchecked();
 	
 	std::map<std::vector<int>, gemmi::Position> points;
 
@@ -151,10 +151,10 @@ get_sample_positions(py::array_t<T> sample_points, py::array_t<T> sample_positio
 }
 
 template<typename T>
-void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, gemmi::Position> sample_points, gemmi::Grid grid)
+void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, gemmi::Position> sample_points, gemmi::Grid<T> grid)
 {
 
-	auto r = sample_array.mutable_unchecked<3>(); // Will throw if ndim != 2 or flags.writeable is false
+	auto r = sample_array.mutable_unchecked(); // Will throw if ndim != 2 or flags.writeable is false
 	for (ssize_t i = 0; i < r.shape(0); i++)
 	{
 		for (ssize_t j = 0; j < r.shape(1); j++)
@@ -168,17 +168,15 @@ void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, gemmi::P
 		}
 	}
 
-	return sample_array;
 }
 
 
 
-template<typename T>
 void add_sample(py::module& m) {
 
 	m.def("sample",
 		[](py::array_t<float> sample_array, 
-			py::array_t<float> sample_points,
+			py::array_t<int> sample_points,
 			py::array_t<float> sample_positions, 
 			gemmi::Grid<float> grid) 
 		{
@@ -189,8 +187,9 @@ void add_sample(py::module& m) {
 
 			fill_array(sample_array, sample_positions_map, grid);
 		
-			return arr;
+
 		},
+		"sampling function"
 		)
 
 }
