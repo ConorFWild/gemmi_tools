@@ -194,7 +194,7 @@ void add_sample(py::module& m) {
 
 	m.def("sample_positions",
 		[](py::array_t<float> sample_array,
-			std::map<std::vec<int>, gemmi::Position> sample_positions_map,
+			std::map<std::vector<int>, gemmi::Position> sample_positions_map,
 			gemmi::Grid<float> grid)
 		{
 
@@ -211,7 +211,7 @@ void add_sample(py::module& m) {
 
 }
 
-PYBIND11_MODULE(gemmi, mg) {
+PYBIND11_MODULE(gemmi_tools_python, mg) {
 	mg.doc() = "General MacroMolecular I/O";
 	mg.attr("__version__") = "N/A";
 	add_sample(mg);
