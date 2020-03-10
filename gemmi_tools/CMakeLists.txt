@@ -5,6 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("gemmi_tools")
 
+set(PYTHON_INSTALL_PATH ${PYTHON_SITE_PACKAGES})
+
 
 # INCLUDES
 # include_directories("${CMAKE_SOURCE_DIR}/include")
@@ -24,8 +26,8 @@ target_link_libraries(gemmi_tools_python PUBLIC /dls/science/groups/i04-1/conor_
 
 
 if (NOT DEFINED PYTHON_INSTALL_DIR)
-  # set(PYTHON_INSTALL_DIR ${PYTHON_SITE_PACKAGES})
-  set(PYTHON_INSTALL_DIR "${CMAKE_SOURCE_DIR}/install")
+  set(PYTHON_INSTALL_DIR ${PYTHON_SITE_PACKAGES})
+  # set(PYTHON_INSTALL_DIR "${CMAKE_SOURCE_DIR}/install")
 endif()
 
 message("${PYTHON_INSTALL_DIR} ===python install ===dir.")
