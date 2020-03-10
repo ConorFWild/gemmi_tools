@@ -1,5 +1,0 @@
-# ninja log v5
-127	922	605037513	include/gemmi/CMakeFiles/ungz.dir/third_party/zlib/inftrees.c.obj	1dd230c9fcb946df
-54	935	605037513	include/gemmi/CMakeFiles/ungz.dir/third_party/zlib/adler32.c.obj	19e2923e346d061e
-103	936	605037513	include/gemmi/CMakeFiles/ungz.dir/third_party/zlib/crc32.c.obj	8831347097a1e5c6
-78	952	605037513	include/gemmi/CMakeFiles/ungz.dir/third_party/zlib/gzlib.c.obj	80cc777d80f90739
