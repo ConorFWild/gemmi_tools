@@ -1,6 +1,6 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include <gemmi/grid.hpp>
+#include <include/gemmi/grid.hpp>
 #include "gemmi/unitcell.hpp"
 
 
