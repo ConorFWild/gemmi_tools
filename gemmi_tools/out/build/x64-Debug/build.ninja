@@ -58,7 +58,7 @@ build CMakeFiles\gemmi_tools_python.dir\python\sample.cpp.obj: CXX_COMPILER__gem
 build gemmi_tools_python.cp37-win_amd64.pyd: CXX_MODULE_LIBRARY_LINKER__gemmi_tools_python CMakeFiles\gemmi_tools_python.dir\python\sample.cpp.obj | C$:\Users\cwild\Anaconda3\libs\Python37.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL
-  LINK_LIBRARIES = C:\Users\cwild\Anaconda3\libs\Python37.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = C:\Users\cwild\Anaconda3\libs\Python37.lib gemmi.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\gemmi_tools_python.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

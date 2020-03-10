@@ -295,7 +295,7 @@ gemmi_tools_BINARY_DIR:STATIC=C:/Users/cwild/Documents/GitHub/gemmi_tools/gemmi_
 gemmi_tools_SOURCE_DIR:STATIC=C:/Users/cwild/Documents/GitHub/gemmi_tools/gemmi_tools
 
 //Dependencies for the target
-gemmi_tools_python_LIB_DEPENDS:STATIC=general;C:/Users/cwild/Anaconda3/libs/Python37.lib;
+gemmi_tools_python_LIB_DEPENDS:STATIC=general;C:/Users/cwild/Anaconda3/libs/Python37.lib;general;gemmi;
 
 //Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=C:/Users/cwild/Documents/GitHub/gemmi_tools/gemmi_tools/out/build/x64-Debug/include/pybind11

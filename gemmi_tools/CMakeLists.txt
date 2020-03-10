@@ -17,10 +17,10 @@ project ("gemmi_tools")
 add_subdirectory ("include/gemmi")
 add_subdirectory ("include/pybind11")
 
-
-
 # PYBIND MODULE
 pybind11_add_module(gemmi_tools_python python/sample.cpp)
+target_link_libraries(gemmi_tools_python PUBLIC gemmi)
+
 
 if (NOT DEFINED PYTHON_INSTALL_DIR)
   # set(PYTHON_INSTALL_DIR ${PYTHON_SITE_PACKAGES})
