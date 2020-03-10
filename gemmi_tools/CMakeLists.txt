@@ -19,7 +19,7 @@ include_directories ("include")
 # PYBIND MODULE
 find_package(pybind11)
 pybind11_add_module(gemmi_tools_python python/sample.cpp)
-target_link_libraries(gemmi_tools_python PUBLIC gemmi)
+target_link_libraries(gemmi_tools_python PUBLIC /dls/science/groups/i04-1/conor_dev/gemmi/libgemmi_lib.a)
 
 
 

@@ -175,22 +175,39 @@ void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, gemmi::P
 void add_sample(py::module& m) {
 
 	m.def("sample",
-		[](py::array_t<float> sample_array, 
+		[](py::array_t<float> sample_array,
 			py::array_t<int> sample_points,
-			py::array_t<float> sample_positions, 
-			gemmi::Grid<float> grid) 
+			py::array_t<float> sample_positions,
+			gemmi::Grid<float> grid)
 		{
-			
+
 			std::map<std::vector<int>, gemmi::Position> sample_positions_map = get_sample_positions(sample_points, sample_positions);
 
 			// std::map<std::vector<int>, T> sample_values = sample(grid, sample_positions);
 
 			fill_array(sample_array, sample_positions_map, grid);
-		
+
 
 		},
 		"sampling function"
-		)
+			);
+
+	m.def("sample_positions",
+		[](py::array_t<float> sample_array,
+			std::map<std::vec<int>, gemmi::Position> sample_positions_map,
+			gemmi::Grid<float> grid)
+		{
+
+			// std::map<std::vector<int>, gemmi::Position> sample_positions_map = get_sample_positions(sample_points, sample_positions);
+
+			// std::map<std::vector<int>, T> sample_values = sample(grid, sample_positions);
+
+			fill_array(sample_array, sample_positions_map, grid);
+
+
+		},
+		"sampling function"
+			);
 
 }
 
