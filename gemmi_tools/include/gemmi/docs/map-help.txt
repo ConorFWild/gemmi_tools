@@ -1,0 +1,11 @@
+$ gemmi map -h
+Usage:
+ gemmi map [options] CCP4_MAP[...]
+
+  -h, --help         Print usage and exit.
+  -V, --version      Print version and exit.
+  -v, --verbose      Verbose output.
+  --deltas           Statistics of dx, dy and dz.
+  --check-symmetry   Compare the values of symmetric points.
+  --write-xyz=FILE   Write transposed map with fast X axis and slow Z.
+  --write-full=FILE  Write map extended to cover whole unit cell.
