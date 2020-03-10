@@ -300,6 +300,9 @@ gemmi_tools_python_LIB_DEPENDS:STATIC=general;C:/Users/cwild/Anaconda3/libs/Pyth
 //Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=C:/Users/cwild/Documents/GitHub/gemmi_tools/gemmi_tools/out/build/x64-Debug/include/pybind11
 
+//The directory containing a CMake configuration file for pybind11.
+pybind11_DIR:PATH=pybind11_DIR-NOTFOUND
+
 //Value Computed by CMake
 pybind11_SOURCE_DIR:STATIC=C:/Users/cwild/Documents/GitHub/gemmi_tools/gemmi_tools/include/pybind11
 
@@ -424,7 +427,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER

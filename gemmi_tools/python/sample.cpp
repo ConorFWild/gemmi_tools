@@ -1,7 +1,9 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include <include/gemmi/grid.hpp>
-#include "gemmi/unitcell.hpp"
+#include <pybind11/numpy.h>
+
+#include <gemmi/grid.hpp>
+#include <gemmi/unitcell.hpp>
 
 
 namespace py = pybind11;
@@ -141,7 +143,7 @@ get_sample_positions(py::array_t<T> sample_points, py::array_t<T> sample_positio
 		std::vector<int> location = { pt(i,0), pt(i,0), pt(i,1), pt(i,2)};
 		gemmi::Position position(ps(i, 0), ps(i, 1), ps(i, 2));
 
-		points.insert(std::pair(location, point));
+		points.insert(std::pair<std::vector<int>, gemmi::Position>(location, position));
 	}
 
 	return points;
@@ -149,8 +151,7 @@ get_sample_positions(py::array_t<T> sample_points, py::array_t<T> sample_positio
 }
 
 template<typename T>
-void fill_array(py::array_t<T> sample_array, 
-	std::map<std::vector<int>, gemmi::Position> sample_points)
+void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, gemmi::Position> sample_points, gemmi::Grid grid)
 {
 
 	auto r = sample_array.mutable_unchecked<3>(); // Will throw if ndim != 2 or flags.writeable is false
@@ -162,7 +163,7 @@ void fill_array(py::array_t<T> sample_array,
 			{
 				std::vector<int> point = { i, j, k };
 				gemmi::Position position = sample_points[point];
-				r(i, j, k) = base_grid.interpolate_value(position);
+				r(i, j, k) = grid.interpolate_value(position);
 			}
 		}
 	}
@@ -172,7 +173,7 @@ void fill_array(py::array_t<T> sample_array,
 
 
 
-
+template<typename T>
 void add_sample(py::module& m) {
 
 	m.def("sample",
@@ -186,7 +187,7 @@ void add_sample(py::module& m) {
 
 			// std::map<std::vector<int>, T> sample_values = sample(grid, sample_positions);
 
-			py::array_t<T> arr = fill_array(sample_array, sample_positions_map);
+			fill_array(sample_array, sample_positions_map, grid);
 		
 			return arr;
 		},
@@ -196,7 +197,7 @@ void add_sample(py::module& m) {
 
 PYBIND11_MODULE(gemmi, mg) {
 	mg.doc() = "General MacroMolecular I/O";
-	mg.attr("__version__") = GEMMI_VERSION;
+	mg.attr("__version__") = "N/A";
 	add_sample(mg);
 	
 }
