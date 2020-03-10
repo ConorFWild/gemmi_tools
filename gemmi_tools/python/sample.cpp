@@ -1,13 +1,13 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-
-#incude "gemmi/grid.cpp"
+#include "gemmi/grid.hpp"
+#include "gemmi/unitcell.hpp"
 
 
 namespace py = pybind11;
 using namespace gemmi;
 
-
+/*
 template<typename T>
 struct Location
 {
@@ -75,6 +75,8 @@ GridBase<T> get_grid(Orientation orientation, Location location, Scale scale, Sh
 
 	return grid;
 }
+
+*/
 
 /*
 template<typename T, typename Z>

@@ -1,0 +1,112 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"include/gemmi/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 302,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 305,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "check_conn::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "doc_example2::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "doc_example::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "hello::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "doc_maybegz::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ctest::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "cpptest::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "print-version::@4412396185b88f9c4723"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "test_disulf::@4412396185b88f9c4723"
+		}
+	],
+	"id" : "check::@4412396185b88f9c4723",
+	"name" : "check",
+	"paths" : 
+	{
+		"build" : "include/gemmi",
+		"source" : "include/gemmi"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/include/gemmi/CMakeFiles/check",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/include/gemmi/CMakeFiles/check.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
