@@ -2,3 +2,4 @@
 *build
 **/.vs
 gemmi_tools/.vs/
+gemmi_tools/out/
