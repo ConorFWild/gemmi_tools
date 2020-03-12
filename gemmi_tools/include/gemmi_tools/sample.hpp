@@ -9,7 +9,8 @@ get_sample_positions(std::map<std::vector<int>, std::vector<T>> sample_positions
 
 	std::map<std::vector<int>, gemmi::Position> grid_map;
 
-	std::map<std::vector<int>, std::vector<T>>::iterator it = sample_positions.begin();
+	auto it = sample_positions.begin();
+
 	while (it != sample_positions.end())
 	{
 		auto location = it.first;
@@ -31,7 +32,7 @@ sample_grid(gemmi::Grid<T> grid, std::map<std::vector<int>, gemmi::Position> sam
 
 	std::map<std::vector<int>, gemmi::Position> values_map;
 
-	std::map<std::vector<int>, gemmi::Position>::iterator it = sample_positions.begin();
+	auto it = sample_positions.begin();
 	while (it != sample_positions.end())
 	{
 
