@@ -75,6 +75,7 @@ void fill_array(py::array_t<T> sample_array, std::map<std::vector<int>, T> sampl
 }
 
 template<typename T>
+std::map<std::vector<int>, std::vector<T>>
 get_point_position_map(std::vector<std::vector<int>> points, std::vector<std::vector<T>> positions)
 {
 
