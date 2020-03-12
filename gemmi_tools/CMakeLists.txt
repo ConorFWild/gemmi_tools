@@ -5,6 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("gemmi_tools")
 
+set(CMAKE_CXX_STANDARD 11)
+
 set(PYTHON_INSTALL_PATH ${PYTHON_SITE_PACKAGES})
 
 
