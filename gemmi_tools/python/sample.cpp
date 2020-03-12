@@ -6,6 +6,7 @@
 #include <gemmi/unitcell.hpp>
 
 #include <gemmi_tools/sample.hpp>
+#include <gemmi/python/grid.cpp>
 
 namespace py = pybind11;
 using namespace gemmi;
