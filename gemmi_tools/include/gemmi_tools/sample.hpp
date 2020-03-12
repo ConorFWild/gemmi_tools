@@ -13,8 +13,8 @@ get_sample_positions(std::map<std::vector<int>, std::vector<T>> sample_positions
 
 	while (it != sample_positions.end())
 	{
-		auto location = it.first;
-		auto position = it.second;
+		auto location = it->first;
+		auto position = it->second;
 
 		gemmi::Position position_gemmi(position[0], position[1], position[2]);
 
@@ -36,8 +36,8 @@ sample_grid(gemmi::Grid<T> grid, std::map<std::vector<int>, gemmi::Position> sam
 	while (it != sample_positions.end())
 	{
 
-		auto location = it.first;
-		auto position = it.second;
+		auto location = it->first;
+		auto position = it->second;
 
 		T grid_value = grid.interpolate_value(position);
 
