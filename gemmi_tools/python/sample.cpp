@@ -145,9 +145,9 @@ void add_sample(py::module& m) {
 			gemmi::Grid<float> grid)
 		{
 
-			std::map<std::vector<int>, std::vector<float>> get_point_position_map(points, positions);
+			std::map<std::vector<int>, std::vector<float>> point_positions_map = get_point_position_map(points, positions);
 
-			std::map<std::vector<int>, gemmi::Position> sample_positions = get_sample_positions(sample_positions_map);
+			std::map<std::vector<int>, gemmi::Position> sample_positions = get_sample_positions(point_positions_map);
 
 			std::map<std::vector<int>, float> sample_values = sample_grid(grid, sample_positions);
 
