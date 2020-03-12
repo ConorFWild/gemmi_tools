@@ -161,7 +161,7 @@ void add_sample(py::module& m) {
 	m.def("test_position",
 		[](gemmi::Position position)
 		{
-			return "Loading grid<float> worked";
+			return "Loading position worked";
 		},
 		"Test if grids load");
 
