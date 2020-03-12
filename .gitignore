@@ -1,3 +1,4 @@
 *.vs
 *build
 **/.vs
+gemmi_tools/.vs/
