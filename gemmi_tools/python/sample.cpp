@@ -122,7 +122,7 @@ void add_sample(py::module& m) {
 		},
 		"Sample a grid from a dictionary of grid points that maps to cartesian positions <gemmi::Position>"
 			);
-
+	/*
 	m.def("sample_point_positions",
 		[](py::array_t<float> sample_array,
 			std::map<std::vector<int>, std::vector<float>> sample_positions_map,
@@ -138,6 +138,7 @@ void add_sample(py::module& m) {
 		},
 		"Sample a grid from a dictionary of grid points that maps to cartesian positions"
 			);
+			*/
 
 	m.def("sample_point_positions",
 		[](py::array_t<float> sample_array,
