@@ -38,7 +38,7 @@ sample_grid(gemmi::Grid<T> grid, std::map<std::vector<int>, gemmi::Position> sam
 		auto location = it.first;
 		auto position = it.second;
 
-		T grid_value = grid.interpolate(position);
+		T grid_value = grid.interpolate_value(position);
 
 		values_map.insert(std::pair<std::vector<int>, T>(location, grid_value));
 
