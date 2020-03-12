@@ -30,7 +30,7 @@ std::map<std::vector<int>, T>
 sample_grid(gemmi::Grid<T> grid, std::map<std::vector<int>, gemmi::Position> sample_positions)
 {
 
-	std::map<std::vector<int>, gemmi::Position> values_map;
+	std::map<std::vector<int>, T> values_map;
 
 	auto it = sample_positions.begin();
 	while (it != sample_positions.end())
