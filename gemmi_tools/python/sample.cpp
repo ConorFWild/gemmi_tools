@@ -159,7 +159,7 @@ void add_sample(py::module& m) {
 		"Sample a grid from a dictionary of grid points that maps to cartesian positions"
 			);
 	m.def("test_position",
-		[](gemmi::Position position)
+		[](gemmi::Position& position)
 		{
 			return "Loading position worked";
 		},
