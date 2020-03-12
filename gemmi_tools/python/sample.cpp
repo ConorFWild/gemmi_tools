@@ -144,7 +144,7 @@ void add_sample(py::module& m) {
 		[](py::array_t<float> sample_array,
 			std::vector<std::vector<int>> points,
 			std::vector<std::vector<float>> positions,
-			py::class_<gemmi::Grid<float>> grid)
+			gemmi::Grid<float> grid)
 		{
 
 			std::map<std::vector<int>, std::vector<float>> point_positions_map = get_point_position_map(points, positions);
@@ -158,6 +158,19 @@ void add_sample(py::module& m) {
 		},
 		"Sample a grid from a dictionary of grid points that maps to cartesian positions"
 			);
+	m.def("test_grid",
+		[](gemmi::Grid<float> grid)
+		{
+			return "Loading grid<float> worked";
+		},
+		"Test if grids load");
+	m.def("test_array",
+		[](py::array_t<float> arr)
+		{
+			return "Loading array_t<float> worked";
+		},
+		"Test if arrays load");
+
 
 }
 
