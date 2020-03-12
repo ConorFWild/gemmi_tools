@@ -4,7 +4,6 @@
 
 #include <gemmi/grid.hpp>
 #include <gemmi/unitcell.hpp>
-#include <gemmi/>
 
 #include <gemmi_tools/sample.hpp>
 
