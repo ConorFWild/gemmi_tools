@@ -25,11 +25,11 @@ find_package(pybind11)
 pybind11_add_module(gemmi_tools_python python/sample.cpp)
 
 # target_link_libraries(gemmi_tools_python PUBLIC /dls/science/groups/i04-1/conor_dev/gemmi/libgemmi_lib.a)
-# SET_TARGET_PROPERTIES( gemmi_tools_python
-# 	PROPERTIES
-#     PREFIX ""
-#     LIBRARY_OUTPUT_DIRECTORY "${PYTHON_SITE_PACKAGES}"
-# )
+SET_TARGET_PROPERTIES( gemmi_tools_python
+	PROPERTIES
+    PREFIX ""
+    LIBRARY_OUTPUT_DIRECTORY "${PYTHON_SITE_PACKAGES}"
+)
 
 
 if (NOT DEFINED PYTHON_INSTALL_DIR)
