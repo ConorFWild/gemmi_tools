@@ -6,7 +6,6 @@
 #include <gemmi/unitcell.hpp>
 
 #include <gemmi_tools/sample.hpp>
-#include <gemmi/python/grid.cpp>
 
 namespace py = pybind11;
 using namespace gemmi;
@@ -159,6 +158,13 @@ void add_sample(py::module& m) {
 		},
 		"Sample a grid from a dictionary of grid points that maps to cartesian positions"
 			);
+	m.def("test_position",
+		[](gemmi::Position position)
+		{
+			return "Loading grid<float> worked";
+		},
+		"Test if grids load");
+
 	m.def("test_grid",
 		[](gemmi::Grid<float> grid)
 		{
